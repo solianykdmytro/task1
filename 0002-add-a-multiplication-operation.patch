@@ -1,0 +1,51 @@
+From 9e338718279b2481f188fea4bcdb895e51eb5cf8 Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:43:25 +0200
+Subject: [PATCH 2/2] add a multiplication operation
+
+Add a member-function which performs multiplication of two float point
+digits.
+
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+
+	modified:   calculator.cpp
+	modified:   calculator.h
+---
+ calculator.cpp | 5 +++++
+ calculator.h   | 5 +++++
+ 2 files changed, 10 insertions(+)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index 34f8d05..e4fa4fd 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -13,3 +13,8 @@ int Calculator::Sub (double a, double b)
+ {
+     return Add (a, -b);
+ }
++
++int Calculator::Mul (double a, double b)
++{
++    return a * b + 0.5;
++}
+diff --git a/calculator.h b/calculator.h
+index 3740907..8930737 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -4,8 +4,13 @@
+ class Calculator
+ {
+     public:
++<<<<<<< HEAD
+         int Add (double, double);
+         int Sub (double, double);
++=======
++        int Add (int, int);
++        int Mul (double, double);
++>>>>>>> e0ea21b (add a multiplication operation)
+ };
+ 
+ #endif//CALCULATOR_H
+-- 
+2.51.0.windows.1
+
